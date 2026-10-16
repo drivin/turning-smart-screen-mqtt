@@ -1,0 +1,41 @@
+# Example bridge sensor configuration. Replace the broker and topics for your setup.
+# Adjust stale timeouts, history lengths and numeric formats as needed.
+broker:
+  host: mqtt.example.com
+  port: 1883
+  tls: false
+  username_env: TURZX_MQTT_USER
+  password_env: TURZX_MQTT_PASSWORD
+sensors:
+  MqttBridgeStatus:
+    label: Zigbee bridge status
+    topic: example/bridge/state
+    path: [state]
+    kind: text
+    stale_after: 3600
+  MqttBridgeMemory:
+    label: Zigbee host memory
+    topic: example/bridge/health
+    path: [os, memory_percent]
+    kind: number
+    unit: '%'
+    decimals: 1
+    history: 60
+    stale_after: 3600
+  MqttBridgeLoad:
+    label: Zigbee host load (1 minute)
+    topic: example/bridge/health
+    path: [os, load_average, 0]
+    kind: number
+    decimals: 2
+    history: 60
+    stale_after: 3600
+  MqttBridgeUptime:
+    label: Zigbee process uptime
+    topic: example/bridge/health
+    path: [process, uptime_sec]
+    kind: number
+    unit: ' s'
+    decimals: 0
+    history: 60
+    stale_after: 3600

@@ -1,0 +1,16 @@
+# Separate example runtime config; does not change upstream config.yaml.
+# STATIC supplies unused local hardware sensors; this theme shows MQTT only.
+config:
+  COM_PORT: AUTO
+  THEME: MqttClusterRetro92
+  HW_SENSORS: STATIC
+  ETH: ''
+  WLO: ''
+  CPU_FAN: AUTO
+  PING: 127.0.0.1
+  WEATHER_API_KEY: ''
+display:
+  REVISION: TUR_USB
+  BRIGHTNESS: 20
+  DISPLAY_REVERSE: true
+  RESET_ON_STARTUP: false

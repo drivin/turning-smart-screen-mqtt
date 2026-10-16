@@ -1,0 +1,31 @@
+# Build from the upstream checkout and standalone extension; no upstream source changes.
+ARG PYTHON_IMAGE=python:3.14-slim-trixie
+FROM ${PYTHON_IMAGE}
+
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends libusb-1.0-0 git \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY turing-smart-screen-python/requirements.txt /tmp/upstream-requirements.txt
+COPY requirements-extension.txt /tmp/extension-requirements.txt
+RUN pip install --no-cache-dir -r /tmp/upstream-requirements.txt -r /tmp/extension-requirements.txt
+
+COPY turing-smart-screen-python/main.py /opt/turing/main.py
+COPY turing-smart-screen-python/library /opt/turing/library
+COPY turing-smart-screen-python/res/fonts /opt/turing/res/fonts
+COPY turing-smart-screen-python/res/icons /opt/turing/res/icons
+COPY turing-smart-screen-python/res/themes/default.yaml /opt/turing/res/themes/default.yaml
+COPY examples/themes/MqttClusterRetro92 /opt/turing/res/themes/MqttClusterRetro92
+COPY examples/runtime-turzx92.yaml /opt/turing/config.yaml
+COPY mqtt_display /opt/mqtt-extension/mqtt_display
+COPY bootstrap /opt/mqtt-extension/bootstrap
+COPY examples/cluster-mqtt-runtime.yaml /config/mqtt.yaml
+
+ENV PYTHONUNBUFFERED=1 \
+    PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONPATH=/opt/mqtt-extension/bootstrap:/opt/mqtt-extension \
+    TURZX_UPSTREAM=/opt/turing \
+    TURZX_MQTT_CONFIG=/config/mqtt.yaml
+
+WORKDIR /opt/turing
+CMD ["python", "main.py"]

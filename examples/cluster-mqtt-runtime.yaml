@@ -1,0 +1,236 @@
+# Example Telegraf scalar topics. Free RAM = Linux MemAvailable. Customize broker, nodes, NICs and mounts.
+broker:
+  host: mqtt.example.com
+  port: 1883
+  tls: false
+  username_env: TURZX_MQTT_USER
+  password_env: TURZX_MQTT_PASSWORD
+render:
+  batch_frames: true
+sensors:
+  MqttNode1Cpu:
+    label: node1 · cpu/cpu-total/usage_active
+    topic: example/cluster/node1/cpu/cpu-total/usage_active
+    kind: number
+    unit: '%'
+    decimals: 1
+    stale_after: 60
+    history: 60
+  MqttNode1RamPercent:
+    label: node1 · mem/used_percent
+    topic: example/cluster/node1/mem/used_percent
+    kind: number
+    unit: '%'
+    decimals: 1
+    stale_after: 60
+    history: 60
+  MqttNode1RamUsed:
+    label: node1 · mem/used
+    topic: example/cluster/node1/mem/used
+    kind: number
+    unit: ' GiB used'
+    decimals: 1
+    stale_after: 60
+    history: 60
+    scale: 9.313225746154785e-10
+  MqttNode1RamFree:
+    label: node1 · mem/available
+    topic: example/cluster/node1/mem/available
+    kind: number
+    unit: ' GiB free'
+    decimals: 1
+    stale_after: 60
+    history: 60
+    scale: 9.313225746154785e-10
+  MqttNode1Root:
+    label: node1 · disk/_/used_percent
+    topic: example/cluster/node1/disk/_/used_percent
+    kind: number
+    unit: '%'
+    decimals: 1
+    stale_after: 60
+    history: 60
+  MqttNode2Cpu:
+    label: node2 · cpu/cpu-total/usage_active
+    topic: example/cluster/node2/cpu/cpu-total/usage_active
+    kind: number
+    unit: '%'
+    decimals: 1
+    stale_after: 60
+    history: 60
+  MqttNode2RamPercent:
+    label: node2 · mem/used_percent
+    topic: example/cluster/node2/mem/used_percent
+    kind: number
+    unit: '%'
+    decimals: 1
+    stale_after: 60
+    history: 60
+  MqttNode2RamUsed:
+    label: node2 · mem/used
+    topic: example/cluster/node2/mem/used
+    kind: number
+    unit: ' GiB used'
+    decimals: 1
+    stale_after: 60
+    history: 60
+    scale: 9.313225746154785e-10
+  MqttNode2RamFree:
+    label: node2 · mem/available
+    topic: example/cluster/node2/mem/available
+    kind: number
+    unit: ' GiB free'
+    decimals: 1
+    stale_after: 60
+    history: 60
+    scale: 9.313225746154785e-10
+  MqttNode2Root:
+    label: node2 · disk/_/used_percent
+    topic: example/cluster/node2/disk/_/used_percent
+    kind: number
+    unit: '%'
+    decimals: 1
+    stale_after: 60
+    history: 60
+  MqttNode3Cpu:
+    label: node3 · cpu/cpu-total/usage_active
+    topic: example/cluster/node3/cpu/cpu-total/usage_active
+    kind: number
+    unit: '%'
+    decimals: 1
+    stale_after: 60
+    history: 60
+  MqttNode3RamPercent:
+    label: node3 · mem/used_percent
+    topic: example/cluster/node3/mem/used_percent
+    kind: number
+    unit: '%'
+    decimals: 1
+    stale_after: 60
+    history: 60
+  MqttNode3RamUsed:
+    label: node3 · mem/used
+    topic: example/cluster/node3/mem/used
+    kind: number
+    unit: ' GiB used'
+    decimals: 1
+    stale_after: 60
+    history: 60
+    scale: 9.313225746154785e-10
+  MqttNode3RamFree:
+    label: node3 · mem/available
+    topic: example/cluster/node3/mem/available
+    kind: number
+    unit: ' GiB free'
+    decimals: 1
+    stale_after: 60
+    history: 60
+    scale: 9.313225746154785e-10
+  MqttNode3Root:
+    label: node3 · disk/_/used_percent
+    topic: example/cluster/node3/disk/_/used_percent
+    kind: number
+    unit: '%'
+    decimals: 1
+    stale_after: 60
+    history: 60
+  MqttNode3Usb1:
+    label: node3 · disk/_mnt_usb1/used_percent
+    topic: example/cluster/node3/disk/_mnt_usb1/used_percent
+    kind: number
+    unit: '%'
+    decimals: 1
+    stale_after: 60
+    history: 60
+  MqttNode3Usb2:
+    label: node3 · disk/_mnt_usb2/used_percent
+    topic: example/cluster/node3/disk/_mnt_usb2/used_percent
+    kind: number
+    unit: '%'
+    decimals: 1
+    stale_after: 60
+    history: 60
+  MqttNode1Rx:
+    label: node1 · net/eth0/bytes_recv
+    topic: example/cluster/node1/net/eth0/bytes_recv
+    kind: number
+    unit: ' MiB/s'
+    decimals: 2
+    stale_after: 60
+    history: 60
+    scale: 9.5367431640625e-07
+    rate: true
+  MqttNode1Tx:
+    label: node1 · net/eth0/bytes_sent
+    topic: example/cluster/node1/net/eth0/bytes_sent
+    kind: number
+    unit: ' MiB/s'
+    decimals: 2
+    stale_after: 60
+    history: 60
+    scale: 9.5367431640625e-07
+    rate: true
+  MqttNode1LinkSpeed:
+    label: node1 · net/eth0/speed
+    topic: example/cluster/node1/net/eth0/speed
+    kind: number
+    unit: ' Mbit/s'
+    decimals: 0
+    stale_after: 60
+    history: 60
+  MqttNode2Rx:
+    label: node2 · net/eth0/bytes_recv
+    topic: example/cluster/node2/net/eth0/bytes_recv
+    kind: number
+    unit: ' MiB/s'
+    decimals: 2
+    stale_after: 60
+    history: 60
+    scale: 9.5367431640625e-07
+    rate: true
+  MqttNode2Tx:
+    label: node2 · net/eth0/bytes_sent
+    topic: example/cluster/node2/net/eth0/bytes_sent
+    kind: number
+    unit: ' MiB/s'
+    decimals: 2
+    stale_after: 60
+    history: 60
+    scale: 9.5367431640625e-07
+    rate: true
+  MqttNode2LinkSpeed:
+    label: node2 · net/eth0/speed
+    topic: example/cluster/node2/net/eth0/speed
+    kind: number
+    unit: ' Mbit/s'
+    decimals: 0
+    stale_after: 60
+    history: 60
+  MqttNode3Rx:
+    label: node3 · net/eth0/bytes_recv
+    topic: example/cluster/node3/net/eth0/bytes_recv
+    kind: number
+    unit: ' MiB/s'
+    decimals: 2
+    stale_after: 60
+    history: 60
+    scale: 9.5367431640625e-07
+    rate: true
+  MqttNode3Tx:
+    label: node3 · net/eth0/bytes_sent
+    topic: example/cluster/node3/net/eth0/bytes_sent
+    kind: number
+    unit: ' MiB/s'
+    decimals: 2
+    stale_after: 60
+    history: 60
+    scale: 9.5367431640625e-07
+    rate: true
+  MqttNode3LinkSpeed:
+    label: node3 · net/eth0/speed
+    topic: example/cluster/node3/net/eth0/speed
+    kind: number
+    unit: ' Mbit/s'
+    decimals: 0
+    stale_after: 60
+    history: 60

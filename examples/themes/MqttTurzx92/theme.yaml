@@ -1,0 +1,104 @@
+# Native panel: 1920x462. Upstream editor canvas: 1920x480.
+# Place all content within y=0..461; bottom 18 rows are not used.
+author: MQTT extension prototype
+display:
+  DISPLAY_SIZE: '9.2"'
+  DISPLAY_ORIENTATION: landscape
+  DISPLAY_RGB_LED: '0, 0, 0'
+static_images: {}
+static_text:
+  TITLE:
+    TEXT: 'MQTT · Zigbee bridge'
+    X: 40
+    Y: 24
+    WIDTH: 900
+    HEIGHT: 48
+    FONT: roboto-mono/RobotoMono-Regular.ttf
+    FONT_SIZE: 32
+    FONT_COLOR: '30, 40, 55'
+    BACKGROUND_COLOR: '255, 255, 255'
+  STATUS_LABEL:
+    TEXT: Status
+    X: 40
+    Y: 110
+    FONT_SIZE: 24
+  MEMORY_LABEL:
+    TEXT: Memory usage
+    X: 420
+    Y: 110
+    FONT_SIZE: 24
+  LOAD_LABEL:
+    TEXT: System load (1 min)
+    X: 880
+    Y: 110
+    FONT_SIZE: 24
+  UPTIME_LABEL:
+    TEXT: Process uptime
+    X: 1360
+    Y: 110
+    FONT_SIZE: 24
+STATS:
+  CUSTOM:
+    INTERVAL: 2
+    MqttBridgeStatus:
+      TEXT:
+        SHOW: true
+        X: 40
+        Y: 155
+        WIDTH: 350
+        HEIGHT: 70
+        FONT_SIZE: 38
+        FONT_COLOR: '30, 100, 70'
+        BACKGROUND_COLOR: '255, 255, 255'
+    MqttBridgeMemory:
+      TEXT:
+        SHOW: true
+        X: 420
+        Y: 155
+        WIDTH: 400
+        HEIGHT: 70
+        FONT_SIZE: 38
+        FONT_COLOR: '30, 40, 55'
+        BACKGROUND_COLOR: '255, 255, 255'
+      GRAPH:
+        SHOW: true
+        X: 420
+        Y: 250
+        WIDTH: 400
+        HEIGHT: 30
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: '30, 130, 200'
+        BACKGROUND_COLOR: '235, 240, 245'
+      LINE_GRAPH:
+        SHOW: true
+        X: 420
+        Y: 310
+        WIDTH: 400
+        HEIGHT: 110
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        AUTOSCALE: false
+        AXIS: false
+        LINE_COLOR: '30, 130, 200'
+        BACKGROUND_COLOR: '245, 248, 250'
+    MqttBridgeLoad:
+      TEXT:
+        SHOW: true
+        X: 880
+        Y: 155
+        WIDTH: 430
+        HEIGHT: 70
+        FONT_SIZE: 38
+        FONT_COLOR: '30, 40, 55'
+        BACKGROUND_COLOR: '255, 255, 255'
+    MqttBridgeUptime:
+      TEXT:
+        SHOW: true
+        X: 1360
+        Y: 155
+        WIDTH: 520
+        HEIGHT: 70
+        FONT_SIZE: 38
+        FONT_COLOR: '30, 40, 55'
+        BACKGROUND_COLOR: '255, 255, 255'

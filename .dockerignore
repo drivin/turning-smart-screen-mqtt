@@ -1,0 +1,13 @@
+.git
+**/.git
+.venv
+**/__pycache__
+**/*.pyc
+.env
+**/.env
+**/*.local.yaml
+artifacts
+tests
+tools
+docs
+.github

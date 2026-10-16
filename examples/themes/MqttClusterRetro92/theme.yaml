@@ -1,0 +1,802 @@
+# Generated from tools/build_cluster_theme.py. Native content fits y < 462.
+author: MQTT extension · Telegraf cluster retro
+display:
+  DISPLAY_SIZE: 9.2"
+  DISPLAY_ORIENTATION: landscape
+  DISPLAY_RGB_LED: 0, 0, 0
+static_images:
+  RETRO:
+    PATH: retro-arcade-v1.png
+    X: 0
+    Y: 0
+    WIDTH: 1920
+    HEIGHT: 480
+static_text: &id001
+  node1_title:
+    SHOW: true
+    X: 124
+    Y: 75
+    WIDTH: 490
+    HEIGHT: 40
+    FONT: roboto-mono/RobotoMono-Regular.ttf
+    FONT_SIZE: 32
+    FONT_COLOR: 30, 225, 255
+    BACKGROUND_COLOR: 4, 8, 28
+    TEXT: NODE1
+  node1_cpu:
+    SHOW: true
+    X: 124
+    Y: 132
+    WIDTH: 320
+    HEIGHT: 30
+    FONT: roboto-mono/RobotoMono-Regular.ttf
+    FONT_SIZE: 22
+    FONT_COLOR: 235, 245, 255
+    BACKGROUND_COLOR: 4, 8, 28
+    TEXT: CPU // TOTAL
+  node1_ram:
+    SHOW: true
+    X: 124
+    Y: 216
+    WIDTH: 355
+    HEIGHT: 29
+    FONT: roboto-mono/RobotoMono-Regular.ttf
+    FONT_SIZE: 21
+    FONT_COLOR: 235, 245, 255
+    BACKGROUND_COLOR: 4, 8, 28
+    TEXT: RAM // USED / FREE
+  node1_root:
+    SHOW: true
+    X: 301
+    Y: 343
+    WIDTH: 280
+    HEIGHT: 33
+    FONT: roboto-mono/RobotoMono-Regular.ttf
+    FONT_SIZE: 25
+    FONT_COLOR: 235, 245, 255
+    BACKGROUND_COLOR: 4, 8, 28
+    TEXT: ROOTFS /
+  node1_disklegend:
+    SHOW: true
+    X: 301
+    Y: 380
+    WIDTH: 280
+    HEIGHT: 26
+    FONT: roboto-mono/RobotoMono-Regular.ttf
+    FONT_SIZE: 18
+    FONT_COLOR: 140, 165, 195
+    BACKGROUND_COLOR: 4, 8, 28
+    TEXT: USED / FREE
+  node2_title:
+    SHOW: true
+    X: 708
+    Y: 75
+    WIDTH: 490
+    HEIGHT: 40
+    FONT: roboto-mono/RobotoMono-Regular.ttf
+    FONT_SIZE: 32
+    FONT_COLOR: 255, 225, 50
+    BACKGROUND_COLOR: 4, 8, 28
+    TEXT: NODE2
+  node2_cpu:
+    SHOW: true
+    X: 708
+    Y: 132
+    WIDTH: 320
+    HEIGHT: 30
+    FONT: roboto-mono/RobotoMono-Regular.ttf
+    FONT_SIZE: 22
+    FONT_COLOR: 235, 245, 255
+    BACKGROUND_COLOR: 4, 8, 28
+    TEXT: CPU // TOTAL
+  node2_ram:
+    SHOW: true
+    X: 708
+    Y: 216
+    WIDTH: 355
+    HEIGHT: 29
+    FONT: roboto-mono/RobotoMono-Regular.ttf
+    FONT_SIZE: 21
+    FONT_COLOR: 235, 245, 255
+    BACKGROUND_COLOR: 4, 8, 28
+    TEXT: RAM // USED / FREE
+  node2_root:
+    SHOW: true
+    X: 885
+    Y: 343
+    WIDTH: 280
+    HEIGHT: 33
+    FONT: roboto-mono/RobotoMono-Regular.ttf
+    FONT_SIZE: 25
+    FONT_COLOR: 235, 245, 255
+    BACKGROUND_COLOR: 4, 8, 28
+    TEXT: ROOTFS /
+  node2_disklegend:
+    SHOW: true
+    X: 885
+    Y: 380
+    WIDTH: 280
+    HEIGHT: 26
+    FONT: roboto-mono/RobotoMono-Regular.ttf
+    FONT_SIZE: 18
+    FONT_COLOR: 140, 165, 195
+    BACKGROUND_COLOR: 4, 8, 28
+    TEXT: USED / FREE
+  node3_title:
+    SHOW: true
+    X: 1292
+    Y: 75
+    WIDTH: 490
+    HEIGHT: 40
+    FONT: roboto-mono/RobotoMono-Regular.ttf
+    FONT_SIZE: 32
+    FONT_COLOR: 255, 65, 195
+    BACKGROUND_COLOR: 4, 8, 28
+    TEXT: NODE3
+  node3_cpu:
+    SHOW: true
+    X: 1292
+    Y: 132
+    WIDTH: 320
+    HEIGHT: 30
+    FONT: roboto-mono/RobotoMono-Regular.ttf
+    FONT_SIZE: 22
+    FONT_COLOR: 235, 245, 255
+    BACKGROUND_COLOR: 4, 8, 28
+    TEXT: CPU // TOTAL
+  node3_ram:
+    SHOW: true
+    X: 1292
+    Y: 216
+    WIDTH: 355
+    HEIGHT: 29
+    FONT: roboto-mono/RobotoMono-Regular.ttf
+    FONT_SIZE: 21
+    FONT_COLOR: 235, 245, 255
+    BACKGROUND_COLOR: 4, 8, 28
+    TEXT: RAM // USED / FREE
+  node3_Root:
+    SHOW: true
+    X: 1307
+    Y: 328
+    WIDTH: 145
+    HEIGHT: 26
+    FONT: roboto-mono/RobotoMono-Regular.ttf
+    FONT_SIZE: 18
+    FONT_COLOR: 235, 245, 255
+    BACKGROUND_COLOR: 4, 8, 28
+    TEXT: ROOT /
+  node3_Usb1:
+    SHOW: true
+    X: 1482
+    Y: 328
+    WIDTH: 145
+    HEIGHT: 26
+    FONT: roboto-mono/RobotoMono-Regular.ttf
+    FONT_SIZE: 18
+    FONT_COLOR: 235, 245, 255
+    BACKGROUND_COLOR: 4, 8, 28
+    TEXT: USB HDD 1
+  node3_Usb2:
+    SHOW: true
+    X: 1657
+    Y: 328
+    WIDTH: 145
+    HEIGHT: 26
+    FONT: roboto-mono/RobotoMono-Regular.ttf
+    FONT_SIZE: 18
+    FONT_COLOR: 235, 245, 255
+    BACKGROUND_COLOR: 4, 8, 28
+    TEXT: USB HDD 2
+STATS:
+  CUSTOM: &id002
+    INTERVAL: 10
+    MqttNode1Cpu:
+      TEXT:
+        SHOW: true
+        X: 478
+        Y: 126
+        WIDTH: 145
+        HEIGHT: 36
+        FONT: roboto-mono/RobotoMono-Regular.ttf
+        FONT_SIZE: 28
+        FONT_COLOR: 30, 225, 255
+        BACKGROUND_COLOR: 4, 8, 28
+      GRAPH:
+        SHOW: true
+        X: 124
+        Y: 171
+        WIDTH: 490
+        HEIGHT: 25
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 30, 225, 255
+        BACKGROUND_COLOR: 35, 65, 95
+    MqttNode1RamPercent:
+      TEXT:
+        SHOW: true
+        X: 478
+        Y: 211
+        WIDTH: 145
+        HEIGHT: 36
+        FONT: roboto-mono/RobotoMono-Regular.ttf
+        FONT_SIZE: 28
+        FONT_COLOR: 255, 65, 195
+        BACKGROUND_COLOR: 4, 8, 28
+      GRAPH:
+        SHOW: true
+        X: 124
+        Y: 255
+        WIDTH: 490
+        HEIGHT: 25
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 255, 65, 195
+        BACKGROUND_COLOR: 15, 115, 125
+    MqttNode1RamUsed:
+      TEXT:
+        SHOW: true
+        X: 124
+        Y: 287
+        WIDTH: 250
+        HEIGHT: 28
+        FONT: roboto-mono/RobotoMono-Regular.ttf
+        FONT_SIZE: 18
+        FONT_COLOR: 255, 65, 195
+        BACKGROUND_COLOR: 4, 8, 28
+    MqttNode1RamFree:
+      TEXT:
+        SHOW: true
+        X: 376
+        Y: 287
+        WIDTH: 250
+        HEIGHT: 28
+        FONT: roboto-mono/RobotoMono-Regular.ttf
+        FONT_SIZE: 18
+        FONT_COLOR: 30, 225, 255
+        BACKGROUND_COLOR: 4, 8, 28
+    MqttNode1Root:
+      RADIAL:
+        SHOW: true
+        X: 221
+        Y: 380
+        RADIUS: 44
+        WIDTH: 44
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        ANGLE_START: 0
+        ANGLE_END: 360
+        ANGLE_SEP: 0
+        ANGLE_STEPS: 1
+        CLOCKWISE: true
+        SHOW_TEXT: false
+        BAR_COLOR: 30, 225, 255
+        BACKGROUND_COLOR: 4, 8, 28
+        DRAW_BAR_BACKGROUND: true
+        BAR_BACKGROUND_COLOR: 35, 65, 95
+      TEXT:
+        SHOW: true
+        X: 167
+        Y: 427
+        WIDTH: 124
+        HEIGHT: 26
+        FONT: roboto-mono/RobotoMono-Regular.ttf
+        FONT_SIZE: 19
+        FONT_COLOR: 30, 225, 255
+        BACKGROUND_COLOR: 4, 8, 28
+    MqttNode2Cpu:
+      TEXT:
+        SHOW: true
+        X: 1062
+        Y: 126
+        WIDTH: 145
+        HEIGHT: 36
+        FONT: roboto-mono/RobotoMono-Regular.ttf
+        FONT_SIZE: 28
+        FONT_COLOR: 255, 225, 50
+        BACKGROUND_COLOR: 4, 8, 28
+      GRAPH:
+        SHOW: true
+        X: 708
+        Y: 171
+        WIDTH: 490
+        HEIGHT: 25
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 255, 225, 50
+        BACKGROUND_COLOR: 35, 65, 95
+    MqttNode2RamPercent:
+      TEXT:
+        SHOW: true
+        X: 1062
+        Y: 211
+        WIDTH: 145
+        HEIGHT: 36
+        FONT: roboto-mono/RobotoMono-Regular.ttf
+        FONT_SIZE: 28
+        FONT_COLOR: 255, 65, 195
+        BACKGROUND_COLOR: 4, 8, 28
+      GRAPH:
+        SHOW: true
+        X: 708
+        Y: 255
+        WIDTH: 490
+        HEIGHT: 25
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 255, 65, 195
+        BACKGROUND_COLOR: 15, 115, 125
+    MqttNode2RamUsed:
+      TEXT:
+        SHOW: true
+        X: 708
+        Y: 287
+        WIDTH: 250
+        HEIGHT: 28
+        FONT: roboto-mono/RobotoMono-Regular.ttf
+        FONT_SIZE: 18
+        FONT_COLOR: 255, 65, 195
+        BACKGROUND_COLOR: 4, 8, 28
+    MqttNode2RamFree:
+      TEXT:
+        SHOW: true
+        X: 960
+        Y: 287
+        WIDTH: 250
+        HEIGHT: 28
+        FONT: roboto-mono/RobotoMono-Regular.ttf
+        FONT_SIZE: 18
+        FONT_COLOR: 30, 225, 255
+        BACKGROUND_COLOR: 4, 8, 28
+    MqttNode2Root:
+      RADIAL:
+        SHOW: true
+        X: 805
+        Y: 380
+        RADIUS: 44
+        WIDTH: 44
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        ANGLE_START: 0
+        ANGLE_END: 360
+        ANGLE_SEP: 0
+        ANGLE_STEPS: 1
+        CLOCKWISE: true
+        SHOW_TEXT: false
+        BAR_COLOR: 255, 225, 50
+        BACKGROUND_COLOR: 4, 8, 28
+        DRAW_BAR_BACKGROUND: true
+        BAR_BACKGROUND_COLOR: 35, 65, 95
+      TEXT:
+        SHOW: true
+        X: 751
+        Y: 427
+        WIDTH: 124
+        HEIGHT: 26
+        FONT: roboto-mono/RobotoMono-Regular.ttf
+        FONT_SIZE: 19
+        FONT_COLOR: 255, 225, 50
+        BACKGROUND_COLOR: 4, 8, 28
+    MqttNode3Cpu:
+      TEXT:
+        SHOW: true
+        X: 1646
+        Y: 126
+        WIDTH: 145
+        HEIGHT: 36
+        FONT: roboto-mono/RobotoMono-Regular.ttf
+        FONT_SIZE: 28
+        FONT_COLOR: 255, 65, 195
+        BACKGROUND_COLOR: 4, 8, 28
+      GRAPH:
+        SHOW: true
+        X: 1292
+        Y: 171
+        WIDTH: 490
+        HEIGHT: 25
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 255, 65, 195
+        BACKGROUND_COLOR: 35, 65, 95
+    MqttNode3RamPercent:
+      TEXT:
+        SHOW: true
+        X: 1646
+        Y: 211
+        WIDTH: 145
+        HEIGHT: 36
+        FONT: roboto-mono/RobotoMono-Regular.ttf
+        FONT_SIZE: 28
+        FONT_COLOR: 255, 65, 195
+        BACKGROUND_COLOR: 4, 8, 28
+      GRAPH:
+        SHOW: true
+        X: 1292
+        Y: 255
+        WIDTH: 490
+        HEIGHT: 25
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        BAR_COLOR: 255, 65, 195
+        BACKGROUND_COLOR: 15, 115, 125
+    MqttNode3RamUsed:
+      TEXT:
+        SHOW: true
+        X: 1292
+        Y: 287
+        WIDTH: 250
+        HEIGHT: 28
+        FONT: roboto-mono/RobotoMono-Regular.ttf
+        FONT_SIZE: 18
+        FONT_COLOR: 255, 65, 195
+        BACKGROUND_COLOR: 4, 8, 28
+    MqttNode3RamFree:
+      TEXT:
+        SHOW: true
+        X: 1544
+        Y: 287
+        WIDTH: 250
+        HEIGHT: 28
+        FONT: roboto-mono/RobotoMono-Regular.ttf
+        FONT_SIZE: 18
+        FONT_COLOR: 30, 225, 255
+        BACKGROUND_COLOR: 4, 8, 28
+    MqttNode3Root:
+      RADIAL:
+        SHOW: true
+        X: 1369
+        Y: 381
+        RADIUS: 39
+        WIDTH: 39
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        ANGLE_START: 0
+        ANGLE_END: 360
+        ANGLE_SEP: 0
+        ANGLE_STEPS: 1
+        CLOCKWISE: true
+        SHOW_TEXT: false
+        BAR_COLOR: 255, 225, 50
+        BACKGROUND_COLOR: 4, 8, 28
+        DRAW_BAR_BACKGROUND: true
+        BAR_BACKGROUND_COLOR: 35, 65, 95
+      TEXT:
+        SHOW: true
+        X: 1320
+        Y: 423
+        WIDTH: 114
+        HEIGHT: 26
+        FONT: roboto-mono/RobotoMono-Regular.ttf
+        FONT_SIZE: 19
+        FONT_COLOR: 255, 225, 50
+        BACKGROUND_COLOR: 4, 8, 28
+    MqttNode3Usb1:
+      RADIAL:
+        SHOW: true
+        X: 1544
+        Y: 381
+        RADIUS: 39
+        WIDTH: 39
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        ANGLE_START: 0
+        ANGLE_END: 360
+        ANGLE_SEP: 0
+        ANGLE_STEPS: 1
+        CLOCKWISE: true
+        SHOW_TEXT: false
+        BAR_COLOR: 30, 225, 255
+        BACKGROUND_COLOR: 4, 8, 28
+        DRAW_BAR_BACKGROUND: true
+        BAR_BACKGROUND_COLOR: 35, 65, 95
+      TEXT:
+        SHOW: true
+        X: 1495
+        Y: 423
+        WIDTH: 114
+        HEIGHT: 26
+        FONT: roboto-mono/RobotoMono-Regular.ttf
+        FONT_SIZE: 19
+        FONT_COLOR: 30, 225, 255
+        BACKGROUND_COLOR: 4, 8, 28
+    MqttNode3Usb2:
+      RADIAL:
+        SHOW: true
+        X: 1719
+        Y: 381
+        RADIUS: 39
+        WIDTH: 39
+        MIN_VALUE: 0
+        MAX_VALUE: 100
+        ANGLE_START: 0
+        ANGLE_END: 360
+        ANGLE_SEP: 0
+        ANGLE_STEPS: 1
+        CLOCKWISE: true
+        SHOW_TEXT: false
+        BAR_COLOR: 255, 65, 195
+        BACKGROUND_COLOR: 4, 8, 28
+        DRAW_BAR_BACKGROUND: true
+        BAR_BACKGROUND_COLOR: 35, 65, 95
+      TEXT:
+        SHOW: true
+        X: 1670
+        Y: 423
+        WIDTH: 114
+        HEIGHT: 26
+        FONT: roboto-mono/RobotoMono-Regular.ttf
+        FONT_SIZE: 19
+        FONT_COLOR: 255, 65, 195
+        BACKGROUND_COLOR: 4, 8, 28
+MQTT_PAGES:
+  INTERVAL: 20
+  VIEWS:
+  - static_text: *id001
+    CUSTOM: *id002
+  - static_text:
+      node1_title:
+        SHOW: true
+        X: 124
+        Y: 75
+        WIDTH: 490
+        HEIGHT: 40
+        FONT: roboto-mono/RobotoMono-Regular.ttf
+        FONT_SIZE: 32
+        FONT_COLOR: 30, 225, 255
+        BACKGROUND_COLOR: 4, 8, 28
+        TEXT: NODE1
+      node1_nic:
+        SHOW: true
+        X: 124
+        Y: 132
+        WIDTH: 490
+        HEIGHT: 30
+        FONT: roboto-mono/RobotoMono-Regular.ttf
+        FONT_SIZE: 22
+        FONT_COLOR: 235, 245, 255
+        BACKGROUND_COLOR: 4, 8, 28
+        TEXT: PARENT NIC // eth0
+      node1_rx:
+        SHOW: true
+        X: 124
+        Y: 184
+        WIDTH: 490
+        HEIGHT: 29
+        FONT: roboto-mono/RobotoMono-Regular.ttf
+        FONT_SIZE: 21
+        FONT_COLOR: 30, 225, 255
+        BACKGROUND_COLOR: 4, 8, 28
+        TEXT: RX // RECEIVE
+      node1_tx:
+        SHOW: true
+        X: 124
+        Y: 274
+        WIDTH: 490
+        HEIGHT: 29
+        FONT: roboto-mono/RobotoMono-Regular.ttf
+        FONT_SIZE: 21
+        FONT_COLOR: 255, 65, 195
+        BACKGROUND_COLOR: 4, 8, 28
+        TEXT: TX // TRANSMIT
+      node1_link:
+        SHOW: true
+        X: 124
+        Y: 389
+        WIDTH: 110
+        HEIGHT: 30
+        FONT: roboto-mono/RobotoMono-Regular.ttf
+        FONT_SIZE: 22
+        FONT_COLOR: 140, 165, 195
+        BACKGROUND_COLOR: 4, 8, 28
+        TEXT: LINK
+      node2_title:
+        SHOW: true
+        X: 708
+        Y: 75
+        WIDTH: 490
+        HEIGHT: 40
+        FONT: roboto-mono/RobotoMono-Regular.ttf
+        FONT_SIZE: 32
+        FONT_COLOR: 255, 225, 50
+        BACKGROUND_COLOR: 4, 8, 28
+        TEXT: NODE2
+      node2_nic:
+        SHOW: true
+        X: 708
+        Y: 132
+        WIDTH: 490
+        HEIGHT: 30
+        FONT: roboto-mono/RobotoMono-Regular.ttf
+        FONT_SIZE: 22
+        FONT_COLOR: 235, 245, 255
+        BACKGROUND_COLOR: 4, 8, 28
+        TEXT: PARENT NIC // eth0
+      node2_rx:
+        SHOW: true
+        X: 708
+        Y: 184
+        WIDTH: 490
+        HEIGHT: 29
+        FONT: roboto-mono/RobotoMono-Regular.ttf
+        FONT_SIZE: 21
+        FONT_COLOR: 30, 225, 255
+        BACKGROUND_COLOR: 4, 8, 28
+        TEXT: RX // RECEIVE
+      node2_tx:
+        SHOW: true
+        X: 708
+        Y: 274
+        WIDTH: 490
+        HEIGHT: 29
+        FONT: roboto-mono/RobotoMono-Regular.ttf
+        FONT_SIZE: 21
+        FONT_COLOR: 255, 65, 195
+        BACKGROUND_COLOR: 4, 8, 28
+        TEXT: TX // TRANSMIT
+      node2_link:
+        SHOW: true
+        X: 708
+        Y: 389
+        WIDTH: 110
+        HEIGHT: 30
+        FONT: roboto-mono/RobotoMono-Regular.ttf
+        FONT_SIZE: 22
+        FONT_COLOR: 140, 165, 195
+        BACKGROUND_COLOR: 4, 8, 28
+        TEXT: LINK
+      node3_title:
+        SHOW: true
+        X: 1292
+        Y: 75
+        WIDTH: 490
+        HEIGHT: 40
+        FONT: roboto-mono/RobotoMono-Regular.ttf
+        FONT_SIZE: 32
+        FONT_COLOR: 255, 65, 195
+        BACKGROUND_COLOR: 4, 8, 28
+        TEXT: NODE3
+      node3_nic:
+        SHOW: true
+        X: 1292
+        Y: 132
+        WIDTH: 490
+        HEIGHT: 30
+        FONT: roboto-mono/RobotoMono-Regular.ttf
+        FONT_SIZE: 22
+        FONT_COLOR: 235, 245, 255
+        BACKGROUND_COLOR: 4, 8, 28
+        TEXT: PARENT NIC // eth0
+      node3_rx:
+        SHOW: true
+        X: 1292
+        Y: 184
+        WIDTH: 490
+        HEIGHT: 29
+        FONT: roboto-mono/RobotoMono-Regular.ttf
+        FONT_SIZE: 21
+        FONT_COLOR: 30, 225, 255
+        BACKGROUND_COLOR: 4, 8, 28
+        TEXT: RX // RECEIVE
+      node3_tx:
+        SHOW: true
+        X: 1292
+        Y: 274
+        WIDTH: 490
+        HEIGHT: 29
+        FONT: roboto-mono/RobotoMono-Regular.ttf
+        FONT_SIZE: 21
+        FONT_COLOR: 255, 65, 195
+        BACKGROUND_COLOR: 4, 8, 28
+        TEXT: TX // TRANSMIT
+      node3_link:
+        SHOW: true
+        X: 1292
+        Y: 389
+        WIDTH: 110
+        HEIGHT: 30
+        FONT: roboto-mono/RobotoMono-Regular.ttf
+        FONT_SIZE: 22
+        FONT_COLOR: 140, 165, 195
+        BACKGROUND_COLOR: 4, 8, 28
+        TEXT: LINK
+    CUSTOM:
+      INTERVAL: 10
+      MqttNode1Rx:
+        TEXT:
+          SHOW: true
+          X: 124
+          Y: 217
+          WIDTH: 490
+          HEIGHT: 44
+          FONT: roboto-mono/RobotoMono-Regular.ttf
+          FONT_SIZE: 32
+          FONT_COLOR: 30, 225, 255
+          BACKGROUND_COLOR: 4, 8, 28
+      MqttNode1Tx:
+        TEXT:
+          SHOW: true
+          X: 124
+          Y: 307
+          WIDTH: 490
+          HEIGHT: 44
+          FONT: roboto-mono/RobotoMono-Regular.ttf
+          FONT_SIZE: 32
+          FONT_COLOR: 255, 65, 195
+          BACKGROUND_COLOR: 4, 8, 28
+      MqttNode1LinkSpeed:
+        TEXT:
+          SHOW: true
+          X: 246
+          Y: 383
+          WIDTH: 365
+          HEIGHT: 40
+          FONT: roboto-mono/RobotoMono-Regular.ttf
+          FONT_SIZE: 28
+          FONT_COLOR: 30, 225, 255
+          BACKGROUND_COLOR: 4, 8, 28
+      MqttNode2Rx:
+        TEXT:
+          SHOW: true
+          X: 708
+          Y: 217
+          WIDTH: 490
+          HEIGHT: 44
+          FONT: roboto-mono/RobotoMono-Regular.ttf
+          FONT_SIZE: 32
+          FONT_COLOR: 30, 225, 255
+          BACKGROUND_COLOR: 4, 8, 28
+      MqttNode2Tx:
+        TEXT:
+          SHOW: true
+          X: 708
+          Y: 307
+          WIDTH: 490
+          HEIGHT: 44
+          FONT: roboto-mono/RobotoMono-Regular.ttf
+          FONT_SIZE: 32
+          FONT_COLOR: 255, 65, 195
+          BACKGROUND_COLOR: 4, 8, 28
+      MqttNode2LinkSpeed:
+        TEXT:
+          SHOW: true
+          X: 830
+          Y: 383
+          WIDTH: 365
+          HEIGHT: 40
+          FONT: roboto-mono/RobotoMono-Regular.ttf
+          FONT_SIZE: 28
+          FONT_COLOR: 255, 225, 50
+          BACKGROUND_COLOR: 4, 8, 28
+      MqttNode3Rx:
+        TEXT:
+          SHOW: true
+          X: 1292
+          Y: 217
+          WIDTH: 490
+          HEIGHT: 44
+          FONT: roboto-mono/RobotoMono-Regular.ttf
+          FONT_SIZE: 32
+          FONT_COLOR: 30, 225, 255
+          BACKGROUND_COLOR: 4, 8, 28
+      MqttNode3Tx:
+        TEXT:
+          SHOW: true
+          X: 1292
+          Y: 307
+          WIDTH: 490
+          HEIGHT: 44
+          FONT: roboto-mono/RobotoMono-Regular.ttf
+          FONT_SIZE: 32
+          FONT_COLOR: 255, 65, 195
+          BACKGROUND_COLOR: 4, 8, 28
+      MqttNode3LinkSpeed:
+        TEXT:
+          SHOW: true
+          X: 1414
+          Y: 383
+          WIDTH: 365
+          HEIGHT: 40
+          FONT: roboto-mono/RobotoMono-Regular.ttf
+          FONT_SIZE: 28
+          FONT_COLOR: 255, 65, 195
+          BACKGROUND_COLOR: 4, 8, 28

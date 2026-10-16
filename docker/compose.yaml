@@ -1,0 +1,31 @@
+services:
+  runtime:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.runtime
+    init: true
+    restart: "no"
+    networks:
+      - messaging
+    environment:
+      TURZX_MQTT_USER: ${TURZX_MQTT_USER:?Set the MQTT username}
+      TURZX_MQTT_PASSWORD: ${TURZX_MQTT_PASSWORD:?Set the MQTT password}
+    devices:
+      - "${TURZX_USB_DEVICE:?Set the USB device path}:${TURZX_USB_DEVICE}:rw"
+    volumes:
+      - type: bind
+        source: ../examples/runtime-turzx92.yaml
+        target: /opt/turing/config.yaml
+        read_only: true
+      - type: bind
+        source: ../examples/cluster-mqtt-runtime.yaml
+        target: /config/mqtt.yaml
+        read_only: true
+      - type: bind
+        source: ../examples/themes/MqttClusterRetro92
+        target: /opt/turing/res/themes/MqttClusterRetro92
+        read_only: true
+networks:
+  messaging:
+    external: true
+    name: ${TURZX_DOCKER_NETWORK:?Set the existing MQTT network name}
